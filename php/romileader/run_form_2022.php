@@ -24,7 +24,7 @@
   $result = $stmt->get_result();
 
 ?>
-        <form method = "post" action = "insert_run.php">
+        <form method = "post" action = "insert_run_2022.php">
          <table>
             <tr>
 	       <td>Player:</td>
@@ -45,22 +45,23 @@
                 </tr>
 
             <tr>
+               <td>Balls Scored:</td>
+               <td><input type = "text" name = "ballScored"></td>
+            </tr>
+
+            <tr>
                <td>Run Time (minutes):</td>
 	       <td><input type = "text" name = "runMinutes">&nbsp;Minutes</td>
             </tr>
+
             <tr>
                <td>Run Time (seconds.ms):</td>
                <td><input type = "text" name = "runSeconds">&nbsp;Seconds.ms</td>
             </tr>
 
             <tr>
-               <td>Penalty:</td>
-               <td><input type = "text" name = "penalty"></td>
-            </tr>
-
-            <tr>
                <td>Bonus:</td>
-               <td><input type = "text" name = "bonus"></td>
+               <td><input type = "checkbox" name = "bonus" value = "No"></td>
             </tr>
 
             <tr>
@@ -75,7 +76,9 @@
             </tr>
          </table>
       </form>
-
+      <div>
+         <a href="../index.html">Home</a>
+      </div>
     </body>
 </html>
 

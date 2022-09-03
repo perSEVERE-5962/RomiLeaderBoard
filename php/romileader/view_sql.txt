@@ -1,0 +1,3 @@
+select row_number() over ( order by `romileader`.`CourseRun`.`BallScored` desc,`romileader`.`CourseRun`.`TotalTime`) AS `Rank`,`romileader`.`Player`.`FirstName` AS `FirstName`,`romileader`.`Player`.`LastName` AS `LastName`,`romileader`.`Player`.`PlayerID` AS `PlayerID`,`romileader`.`CourseRun`.`BallScored` AS `BallScored`,`romileader`.`CourseRun`.`RunTime` AS `RunTime`,`romileader`.`CourseRun`.`TotalTime` AS `TotalTime`,`romileader`.`CourseRun`.`Bonus` AS `Bonus` from (`romileader`.`Player` join `romileader`.`CourseRun`) where `romileader`.`Player`.`PlayerID` = `romileader`.`CourseRun`.`PlayerID` order by row_number() over ( order by `romileader`.`CourseRun`.`BallScored` desc,`romileader`.`CourseRun`.`TotalTime`)
+
+
